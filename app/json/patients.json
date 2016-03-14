@@ -1,0 +1,45 @@
+{
+    "patients": [{
+        "id": "1",
+        "name": "Patient1",
+        "surname": "test_1",
+        "complaint": "Before making a complaint consider discussing your concerns with the provider you are unhappy with. If that does not resolve your concerns, you may want to take the matter further.",
+        "visit_doctor": "mo 12:30"
+    }, {
+        "id": "2",
+        "name": "Patient2",
+        "surname": "test_2",
+        "complaint": "Any person (the consumer, a family member, or even another provider) may complain to the HDC alleging that any action of a provider is or appears to be in breach of the Code.",
+        "visit_doctor": "mo 15:00"
+    }, {
+        "id": "3",
+        "name": "Patient3",
+        "surname": "test_3",
+        "complaint": "The Inquiries, Complaints and Reports Committee is made up of physicians and government appointed public members. A panel from among the members of the Committee is selected to direct each investigation, consider the doctor's response to the complaint, and make a reasonable effort to consider all relevant records and documents.",
+        "visit_doctor": "th 10:00"
+    }, {
+        "id": "4",
+        "name": "Patient4",
+        "surname": "test_4",
+        "complaint": "If you have a concern about communication, records, or if you have questions about the treatment you've received, we strongly encourage you to first speak with your doctor or hospital, if possible, before contacting the College. This is often the most direct way to get the answers that you need. If this is not possible or successful, then we urge you to contact the College for assistance.",
+        "visit_doctor": "we 08:00"
+    }, {
+        "id": "5",
+        "name": "Patient5",
+        "surname": "test_5",
+        "complaint": "If your concerns or questions are about the quality or appropriateness of care received, please call our Public Advisory Department at 416-967-2603 or 1-800-268-7096 extension 603. Staff may be able to answer your questions; clarify which questions to take back to your doctor; and/or answer questions about how the health care system works.",
+        "visit_doctor": "fr 12:30"
+    }, {
+        "id": "6",
+        "name": "Patient6",
+        "surname": "test_6",
+        "complaint": "When all the information has been reviewed, the Inquiries, Complaints and Reports Committee will decide to do one of the following:",
+        "visit_doctor": "su 11:00"
+    }, {
+        "id": "7",
+        "name": "Patient7",
+        "surname": "test_7",
+        "complaint": "In such cases, the Committee provides notice to the complainant and the doctor that it intends not to investigate. Both the complainant and doctor have the right to make written submissions to the Committee within 30 days of being given such notice. If, after considering any written submissions, the Committee is satisfied that a complaint is frivolous, vexatious, made in bad faith or an abuse of process, it will not investigate. Only a very small percentage of complaints meet the requirements for this exception.",
+        "visit_doctor": "mo 15:00"
+    }]
+}
