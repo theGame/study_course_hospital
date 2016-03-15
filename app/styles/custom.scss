@@ -1,19 +1,37 @@
 body{
   background: transparent;
+  section#tables{
+    width: 100%;
+    height: 425px;
 
-  table{
-    &.table{
-      width: 99% !important;
+    .table-responsive.doctor{
+      float: right;
+      overflow: hidden;
     }
 
-    th{
-      text-align: center;
-    }
-    td{
+    .table-responsive{
+      height: 100% !important;
+      width: 49%;
+      float: left;
 
-      > .data{
-        width: 100px;
-        text-align: center;
+      table{
+        height: 100%;
+        overflow: auto;
+
+        &.table{
+          width: 100%;
+        }
+
+        th{
+          text-align: center;
+        }
+        td{
+
+          > .data{
+            width: 100px;
+            text-align: center;
+          }
+        }
       }
     }
   }
