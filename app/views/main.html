@@ -23,6 +23,7 @@
           <td>{{patient.surname}}</td>
           <td>{{patient.complaint}}</td>
           <td class="date">{{patient.visit_doctor}}</td>
+          <td data-ng-click="removePatient($index)"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></td>
         </tr>
         </tbody>
       </table>
@@ -45,7 +46,7 @@
           <td>{{doctor.name}}</td>
           <td>{{doctor.surname}}</td>
           <td>{{doctor.type}}</td>
-          <td>{{doctor.patient_id}}</td>
+          <td>{{doctor.patient_id | cutBracket }}</td>
         </tr>
         </tbody>
       </table>
