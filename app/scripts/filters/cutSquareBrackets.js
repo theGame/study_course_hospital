@@ -1,13 +1,14 @@
 'use strict';
 
-app.filter('cutBracket', function(){
+app.filter('cutBracket', function(noPatient){
   return function( cutBracket ){
-    //$scope.reg = /([])/;
-    cutBracket.replace("\[", "");
-    console.log(cutBracket);
-    cutBracket.replace("\]", "");
-    console.log(cutBracket);
+    cutBracket = cutBracket.replace("\[", "");
+    cutBracket = cutBracket.replace("\]", "");
 
-    //need to fix that filter
+    if (!cutBracket){
+      cutBracket = noPatient;
+    }
+
+    return cutBracket;
   }
 });

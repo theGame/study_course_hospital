@@ -1,35 +1,101 @@
+$table-title-red: #F50000;
+
 body{
   background: transparent;
   section#tables{
     width: 100%;
     height: 425px;
 
-    .table-responsive.doctor{
-      float: right;
-      overflow: hidden;
+    #restore-patient{
+      position: absolute;
+      right: 15%;
+      top: 4px;
+
+      .update-nag{
+        display: inline-block;
+        font-size: 14px;
+        text-align: left;
+        background-color: #fff;
+        height: 40px;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+        margin-bottom: 10px;
+
+        & > .update-text{
+          line-height: 19px;
+          padding-top: 11px;
+          padding-left: 45px;
+          padding-right: 20px;
+
+          & > #restore-patient-link{
+            color: $table-title-red;
+            cursor: pointer;
+          }
+        }
+
+        & > .update-split{
+          background: #337ab7;
+          width: 33px;
+          float: left;
+          color: #fff!important;
+          height: 100%;
+          text-align: center;
+
+          & > .glyphicon{
+            position:relative;
+            top: calc(50% - 9px)!important; /* 50% - 3/4 of icon height */
+          }
+        }
+      }
     }
 
+
+
     .table-responsive{
-      height: 100% !important;
-      width: 49%;
+      width: 100%;
       float: left;
 
       table{
-        height: 100%;
+        margin-bottom: 0 !important;
         overflow: auto;
+
+        caption + tbody{
+          *{
+            background: #FFF7DA ;
+
+            &:hover{
+              background: #FFF3C6;
+            }
+          }
+        }
 
         &.table{
           width: 100%;
-        }
 
-        th{
-          text-align: center;
-        }
-        td{
+          caption{
+            color: $table-title-red;
+            font-size: x-large;
+          }
 
-          > .data{
-            width: 100px;
+          th{
             text-align: center;
+          }
+          td{
+
+            > .data{
+              width: 100px;
+              text-align: center;
+            }
+          }
+        }
+
+        &.table > tbody + tbody{
+          background: #F1F8FF;
+
+          > tr{
+            &:hover{
+              background: #DDEDFD;
+            }
           }
         }
       }

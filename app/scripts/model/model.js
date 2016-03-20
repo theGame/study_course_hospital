@@ -10,6 +10,7 @@
  */
 var app = angular
   .module('hospitalJsApp', [
+    'ngStorage',
     'ngAnimate',
     'ngCookies',
     'ngResource',
