@@ -1,0 +1,10 @@
+<section id="restore-data" data-ng-controller="restorePatientCtrl">
+  <section id="restore-patient" ng-show="$storage.newPatient">
+    <div class="col-md-12">
+      <div class="update-nag">
+        <div class="update-split"><i class="glyphicon glyphicon-refresh"></i></div>
+        <div class="update-text">{{$storage.newPatient.name}} <a id="restore-patient-link" data-ng-click="restorePatient()">Restore Patient !</a> </div>
+      </div>
+    </div>
+  </section>
+</section>

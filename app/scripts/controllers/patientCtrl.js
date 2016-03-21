@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('PatientsCtrl', function ($scope, $http, $sessionStorage){
+app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStorage){
 
   $scope.users = [];
 
@@ -44,11 +44,8 @@ app.controller('PatientsCtrl', function ($scope, $http, $sessionStorage){
     $sessionStorage.newPatient = new $scope.Patient($scope.users.patients[index].name, $scope.users.patients[index].surname, $scope.users.patients[index].complaint, $scope.users.patients[index].visit_doctor, $scope.users.patients[index].id );
   };
 
-  $scope.restorePatient = function(){
-    console.log($sessionStorage.newPatient);
-    this.users.patients.push($sessionStorage.newPatient);
+  $scope.$on('passPatient', function(event, data){
+    $scope.users.patients.push(data);
+  });
 
-    //delete from storage
-    delete $sessionStorage.newPatient;
-  }
 });

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center text-danger">Doctors list</h2>
+      <div class="table-responsive" data-ng-controller="DoctorCtrl">
+        <table id="mytable" class="table table-bordred table-striped table-hover">
+          <thead>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Type</th>
+            <th>Patient care</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </thead>
+          <tbody>
+            <tr data-ng-repeat="doctor in specialists.doctors">
+              <td class="text-center">{{doctor.id}}</td>
+              <td class="text-center">{{doctor.name}}</td>
+              <td class="text-center">{{doctor.surname}}</td>
+              <td class="text-center">{{doctor.type}}</td>
+              <td class="text-center">{{doctor.patient_id | cutBracket }}</td>
+              <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit" tooltip><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+              <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete" tooltip><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+   </div>
+  </div>

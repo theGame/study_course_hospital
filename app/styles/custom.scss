@@ -1,55 +1,53 @@
 $table-title-red: #F50000;
+$white: #ffffff;
 
 body{
   background: transparent;
-  section#tables{
-    width: 100%;
-    height: 425px;
 
-    #restore-patient{
-      position: absolute;
-      right: 15%;
-      top: 4px;
+  #restore-patient{
+    position: absolute;
+    right: 0.5%;
+    top: 4px;
 
-      .update-nag{
-        display: inline-block;
-        font-size: 14px;
-        text-align: left;
-        background-color: #fff;
-        height: 40px;
-        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-        margin-bottom: 10px;
+    .update-nag{
+      display: inline-block;
+      font-size: 14px;
+      text-align: left;
+      background-color: $white;
+      height: 40px;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      margin-bottom: 10px;
 
-        & > .update-text{
-          line-height: 19px;
-          padding-top: 11px;
-          padding-left: 45px;
-          padding-right: 20px;
+      & > .update-text{
+        line-height: 19px;
+        padding-top: 11px;
+        padding-left: 45px;
+        padding-right: 20px;
 
-          & > #restore-patient-link{
-            color: $table-title-red;
-            cursor: pointer;
-          }
+        & > #restore-patient-link{
+          color: $table-title-red;
+          cursor: pointer;
         }
+      }
 
-        & > .update-split{
-          background: #337ab7;
-          width: 33px;
-          float: left;
-          color: #fff!important;
-          height: 100%;
-          text-align: center;
+      & > .update-split{
+        background: #337ab7;
+        width: 33px;
+        float: left;
+        color: $white !important;
+        height: 100%;
+        text-align: center;
 
-          & > .glyphicon{
-            position:relative;
-            top: calc(50% - 9px)!important; /* 50% - 3/4 of icon height */
-          }
+        & > .glyphicon{
+          position:relative;
+          top: calc(50% - 9px)!important; /* 50% - 3/4 of icon height */
         }
       }
     }
+  }
 
-
+  section#tables{
 
     .table-responsive{
       width: 100%;
@@ -58,16 +56,6 @@ body{
       table{
         margin-bottom: 0 !important;
         overflow: auto;
-
-        caption + tbody{
-          *{
-            background: #FFF7DA ;
-
-            &:hover{
-              background: #FFF3C6;
-            }
-          }
-        }
 
         &.table{
           width: 100%;

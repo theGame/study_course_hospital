@@ -5,61 +5,11 @@
       physicians, nurses, pharmacists and health care workers â€“ all dedicated to patient health.</p>
 </div>
 <section id="tables">
-  <div class="table-responsive patient" data-ng-controller="PatientsCtrl">
-    <table class="table table-bordered table-hover">
-      <thead>
-      <tr class="thead">
-        <caption>Patients list</caption>
-        <th>#</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Problem</th>
-        <th>Date to visit doctor</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr data-ng-repeat="patient in users.patients">
-        <td>{{patient.id}}</td>
-        <td>{{patient.name}}</td>
-        <td>{{patient.surname}}</td>
-        <td>{{patient.complaint}}</td>
-        <td class="date">{{patient.visit_doctor}}</td>
-        <td data-ng-click="removePatient($index)"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span></td>
-      </tr>
-      </tbody>
-    </table>
 
-    <section id="restore-patient" ng-show="$storage.newPatient">
-      <div class="col-md-12">
-        <div class="update-nag">
-          <div class="update-split"><i class="glyphicon glyphicon-refresh"></i></div>
-          <div class="update-text">{{$storage.newPatient.name}} <a id="restore-patient-link" data-ng-click="restorePatient()">Restore Patient !</a> </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="table-responsive doctor" data-ng-controller="DoctorCtrl">
-    <table class="table table-bordered table-hover">
-      <thead>
-      <tr class="thead">
-        <caption>Doctors list</caption>
-        <th>#</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Type</th>
-        <th>Patient care</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr data-ng-repeat="doctor in specialists.doctors">
-        <td>{{doctor.id}}</td>
-        <td>{{doctor.name}}</td>
-        <td>{{doctor.surname}}</td>
-        <td>{{doctor.type}}</td>
-        <td>{{doctor.patient_id | cutBracket }}</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
+  <!-- Patients table -->
+  <patients-table></patients-table>
+  <!-- Doctors table -->
+  <doctors-table></doctors-table>
+
 </section>
 
