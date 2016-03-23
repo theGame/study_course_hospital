@@ -9,6 +9,9 @@
  */
 app.controller('MainCtrl', function ($scope) {
 
-  //$scope.patientsList = getDate.getPatients();
 
+  $scope.$on('onPatientEdit', function(event, data){
+    $scope.$broadcast('showEditModal', data);
   });
+
+});

@@ -40,9 +40,15 @@ app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStor
     $sessionStorage.newPatient = new $scope.Patient($scope.users.patients[index].name, $scope.users.patients[index].surname, $scope.users.patients[index].complaint, $scope.users.patients[index].visit_doctor, $scope.users.patients[index].id );
   };
 
-  //listener
+  //listeners
   $scope.$on('passPatient', function(event, data){
     $scope.users.patients.push(data);
   });
+
+  $scope.editPatient = function(index){
+    var obj = $scope.users.patients[index];
+    $scope.$emit('onPatientEdit', ['patient', obj]);
+  }
+
 
 });
