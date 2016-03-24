@@ -45,8 +45,14 @@ app.controller('modalCtrl', function ($scope) {
 
 
   $scope.updateData = function(){
+    //up-to-data 
     $scope.firstName = $('#firstName').val();
     $scope.lastName = $('#lastName').val();
-    ( $scope.typeUser === 'patient' ) ? sentToPatient(firstName, lastName, index) : sentToDoctor(firstName, lastName, index);
+    $scope.problem = $('#problem').val();
+    $scope.dateVisit = $('#dateVisit').val();
+    $scope.occupation = $('#occupation').val();
+    $scope.patientCare = $('#patientCare').val();
+    $scope.index = $('.index')[0].getAttribute('data-index');
+    ( $scope.typeUser === 'patient' ) ? sentToPatient(firstName, lastName, $scope.index, problem, dateVisit) : sentToDoctor(firstName, lastName, $scope.index, occupation, patientCare);
   };
 });
