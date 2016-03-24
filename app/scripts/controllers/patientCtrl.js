@@ -47,8 +47,8 @@ app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStor
 
   $scope.editPatient = function(index){
     var obj = $scope.users.patients[index];
-    $scope.$emit('onPatientEdit', ['patient', obj]);
-  }
+    $scope.$emit('onPatientEdit', ['patient', obj, index]);
+  };
 
 
 });

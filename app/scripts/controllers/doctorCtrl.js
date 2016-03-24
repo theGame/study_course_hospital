@@ -17,4 +17,10 @@ app.controller('DoctorCtrl', function ($scope, $http){
     console.warn(res);
   });
 
+
+  $scope.editDoctor = function(index){
+    var obj = $scope.specialists.doctors[index];
+    $scope.$emit('onDoctorEdit', ['doctor', obj, index]);
+  };
+
 });
