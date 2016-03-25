@@ -36,23 +36,19 @@ app.controller('modalCtrl', function ($scope) {
     $scope.index = data[2];
   };
 
-  function sentToPatient(){
-    console.log(data);
-  };
-  function sentToDoctor(){
-    console.log(data);
-  };
-
 
   $scope.updateData = function(){
-    //up-to-data 
-    $scope.firstName = $('#firstName').val();
-    $scope.lastName = $('#lastName').val();
-    $scope.problem = $('#problem').val();
-    $scope.dateVisit = $('#dateVisit').val();
-    $scope.occupation = $('#occupation').val();
-    $scope.patientCare = $('#patientCare').val();
+    //up-to-data
+    var obj = {};
+    obj.firstName = $('#firstName').val();
+    obj.lastName = $('#lastName').val();
+    obj.problem = $('#problem').val();
+    obj.dateVisit = $('#dateVisit').val();
+    obj.occupation = $('#occupation').val();
+    obj.patientCare = $('#patientCare').val();
     $scope.index = $('.index')[0].getAttribute('data-index');
-    ( $scope.typeUser === 'patient' ) ? sentToPatient(firstName, lastName, $scope.index, problem, dateVisit) : sentToDoctor(firstName, lastName, $scope.index, occupation, patientCare);
+
+    $scope.$emit('sentBackData', [$scope.index, $scope.typeUser, obj]);
+
   };
 });

@@ -45,6 +45,14 @@ app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStor
     $scope.users.patients.push(data);
   });
 
+  $scope.$on('dataFromModelToPatient', function(event, data){
+    //set new data
+    event.currentScope.users.patients[data[0]].name = data[1].firstName;
+    event.currentScope.users.patients[data[0]].complaint = data[1].problem;
+    event.currentScope.users.patients[data[0]].surname = data[1].lastName;
+    event.currentScope.users.patients[data[0]].visit_doctor = data[1].dateVisit;
+  });
+
   $scope.editPatient = function(index){
     var obj = $scope.users.patients[index];
     $scope.$emit('onPatientEdit', ['patient', obj, index]);
