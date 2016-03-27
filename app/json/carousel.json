@@ -1,0 +1,34 @@
+{
+  "carouselImages": [{
+    "id": "1",
+    "image_name": "image1.jpg",
+    "alt": "Doc1",
+    "title": "Audiologist",
+    "sub_title": "1"
+  }, {
+    "id": "2",
+    "image_name": "image2.jpg",
+    "alt": "Doc2",
+    "title": "Cardiologist",
+    "sub_title": "2"
+  }, {
+    "id": "3",
+    "image_name": "image3.jpg",
+    "alt": "Doc3",
+    "title": "Surgeon",
+    "sub_title": "3"
+  }, {
+    "id": "4",
+    "image_name": "image4.jpg",
+    "alt": "Doc4",
+    "title": "Physiologist",
+    "sub_title": "4"
+  },
+  {
+    "id": "5",
+    "image_name": "image5.jpg",
+    "alt": "Doc4",
+    "title": "Physiologist",
+    "sub_title": "4"
+  }]
+}
