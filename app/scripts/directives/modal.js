@@ -1,3 +1,5 @@
+'use strict';
+
 app.directive('modalWindow', function () {
   return {
     templateUrl: '../../views/modal.html',

@@ -2,31 +2,31 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        <h4 class="modal-title custom_align" id="Heading">Edit {{user.typeUser}} Detail</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true" data-ng-click="disableChanges()"></span></button>
+        <h4 class="modal-title custom_align" id="Heading">Edit {{userType}} Detail</h4>
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <input class="form-control" type="text" id="firstName" placeholder="Name:" value="{{user.firstName}}">
+          <input class="form-control" type="text" id="firstName" placeholder="Name:" data-ng-model="user.name">
         </div>
         <div class="form-group">
-          <input class="form-control" type="text" id="lastName" placeholder="Second name: " value="{{user.lastName}}">
+          <input class="form-control" type="text" id="lastName" placeholder="Second name: " data-ng-model="user.surname">
         </div>
-        <div class="form-group" data-ng-if="typeUser === 'patient'">
-          <input class="form-control" type="text" id="dateVisit" placeholder="Date to visit doctor: " value="{{user.dateVisit}}">
+        <div class="form-group" data-ng-if="userType === 'patient'">
+          <input class="form-control" type="text" id="dateVisit" placeholder="Date to visit doctor: " data-ng-model="user.visit_doctor">
         </div>
-        <div class="form-group" data-ng-if="typeUser === 'doctor'">
-          <input class="form-control" type="text" id="occupation" placeholder="Occupation: " value="{{user.occupation}}">
+        <div class="form-group" data-ng-if="userType === 'doctor'">
+          <input class="form-control" type="text" id="occupation" placeholder="Occupation: " data-ng-model="user.type">
         </div>
-        <div class="form-group" data-ng-if="typeUser === 'doctor'">
-          <input class="form-control" type="text" id="patientCare" placeholder="Has patients?: " value="{{user.patientCare |cutBracket}}">
+        <div class="form-group" data-ng-if="userType === 'doctor'">
+          <input class="form-control" type="text" id="patientCare" placeholder="Has patients?: " data-ng-model="user.patient_id">
         </div>
-        <div class="form-group" data-ng-if="typeUser === 'patient'">
-          <textarea rows="2" class="form-control" id="problem" placeholder="Complaint: ">{{user.problem}}</textarea>
+        <div class="form-group" data-ng-if="userType === 'patient'">
+          <textarea rows="2" class="form-control" id="problem" placeholder="Complaint: " data-ng-model="user.complaint"></textarea>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" data-ng-click="updateData()" data-dismiss="modal" aria-hidden="true" class="btn btn-warning btn-lg index" style="width: 100%;" data-index="{{index}}"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+        <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-warning btn-lg index" style="width: 100%;" data-index="{{index}}"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
       </div>
     </div>
     <!-- /.modal-content -->
