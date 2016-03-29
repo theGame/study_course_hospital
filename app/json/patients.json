@@ -27,7 +27,7 @@
         "id": "5",
         "name": "Patient5",
         "surname": "test_5",
-        "complaint": "If your concerns or questions are about the quality or appropriateness of care received, please call our Public Advisory Department at 416-967-2603 or 1-800-268-7096 extension 603. Staff may be able to answer your questions; clarify which questions to take back to your doctor; and/or answer questions about how the health care system works.",
+        "complaint": "If your concerns or questions are about the quality or appropriateness of care received, please call our Public Advisory Department at extension 603. Staff may be able to answer your questions; clarify which questions to take back to your doctor; and/or answer questions about how the health care system works.",
         "visit_doctor": "fr 12:30"
     }, {
         "id": "6",
