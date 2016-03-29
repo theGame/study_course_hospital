@@ -1,7 +1,7 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-ng-controller="carouselCtrl">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="{in:$first}" data-ng-repeat="image in carousel.carouselImages"></li>
+    <li data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="{active:$first}" data-ng-repeat="image in carousel.carouselImages"></li>
   </ol>
 
   <!-- Wrapper for slides -->
