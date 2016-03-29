@@ -2,6 +2,7 @@
 
 app.controller('carouselCtrl', function ($scope, $http){
   $scope.carousel = [];
+  $scope.index = 0;
   $scope.myInterval = 3000;
 
   //get images and titles
