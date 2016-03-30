@@ -1,15 +1,14 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-ng-controller="carouselCtrl">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="{active:$first}" class="item" data-ng-repeat="image in carousel.carouselImages"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item" data-ng-repeat="image in carousel.carouselImages" data-ng-class="{active:$index}">
-      <img data-ng-src="../images/{{image.image_name}}">
+<div class="jumbotron">
+  <section data-ng-controller="carouselCtrl">
+    <div carousel interval="3000">
+      <div slide ng-repeat="slide in carousel.carouselImages" active="slide.active">
+        <img ng-src="../images/{{slide.image_name}}" style="margin: auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.title}}</p>
+        </div>
+      </div>
     </div>
-
-  </div>
-
+  </section>
 </div>
+
