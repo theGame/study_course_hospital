@@ -1,21 +1,11 @@
 'use strict';
 
-app.controller('DoctorCtrl', function ($scope, $http){
+app.controller('DoctorCtrl', function ($scope, $http, getData){
 
-  $scope.specialists = [];
-
-  //get patients
-  $http({
-    methoud : "GET",
-    url : "../../json/doctors.json"
-  }).then(function succeshandler(res){
-
-    $scope.specialists = res.data;
-    console.log(res.data)
-
-  }, function errorshandler(res){
-    console.warn(res);
+  $scope.specialists = getData.getDoctorsData().then(function(response){
+    $scope.specialists = response.data;
   });
+
 
   $scope.removeDoctor = function(index){
     $scope.specialists.doctors.splice(index, 1);

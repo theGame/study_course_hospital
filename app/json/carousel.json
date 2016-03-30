@@ -3,32 +3,32 @@
     "id": "1",
     "image_name": "image1.jpg",
     "alt": "Doc1",
-    "title": "Audiologist",
-    "sub_title": "1"
+    "title": "AESTHETIC SURGERY",
+    "sub_title": "The field of plastic and aesthetic surgery offers a wide variety of different surgical treatment options aimed at optimising a patient's appearance in accordance with their wishes..."
   }, {
     "id": "2",
     "image_name": "image2.jpg",
     "alt": "Doc2",
-    "title": "Cardiologist",
-    "sub_title": "2"
+    "title": "RHEUMATOLOGY",
+    "sub_title": "Most rheumatological diseases demand professional care by experienced rheumatological experts and specialized medical teams in order for a patient to receive the proper treatment a..."
   }, {
     "id": "3",
     "image_name": "image3.jpg",
     "alt": "Doc3",
-    "title": "Surgeon",
-    "sub_title": "3"
+    "title": "UROLOGY",
+    "sub_title": "Regular urological consultations ensure that urological problems or diseases can be prevented, diagnosed or treated as appropriate. ..."
   }, {
     "id": "4",
     "image_name": "image4.jpg",
     "alt": "Doc4",
     "title": "Physiologist",
-    "sub_title": "4"
+    "sub_title": "Through high-quality orthopedic surgery, various disorders and diseases of the bones and joints can be treated or potentially healed. ..."
   },
   {
     "id": "5",
     "image_name": "image5.jpg",
     "alt": "Doc4",
-    "title": "Physiologist",
-    "sub_title": "4"
+    "title": "ORTHOPEDICS",
+    "sub_title": "Through high-quality orthopedic surgery, various disorders and diseases of the bones and joints can be treated or potentially healed. ..."
   }]
 }

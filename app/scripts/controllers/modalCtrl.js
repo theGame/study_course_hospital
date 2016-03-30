@@ -24,25 +24,41 @@ app.controller('modalCtrl', function ($scope, $filter) {
       $scope.user.patient_id = $filter('cutBracket')($scope.user.patient_id);
     }
 
-    var previousData = function(){
-      var test = {
-        name: $scope.user.name,
-        surename: $scope.user.surname,
-        visit_doctor: $scope.user.visit_doctor,
-        type: $scope.user.type,
-        patient_id: $scope.user.patient_id,
-        complaint: $scope.user.complaint
-      }
-
-      previousData();
-
-      this.getPreviousData = function(previousData){
-        return previousData;
-      }
-    };
+    $scope.oldData($scope.user);
   }
+
+  $scope.oldData = function(user){
+    var oldUser = {
+      name: $scope.user.name,
+      surname: $scope.user.surname,
+      visit_doctor: $scope.user.visit_doctor,
+      type: $scope.user.type,
+      patient_id: $scope.user.patient_id,
+      complaint: $scope.user.complaint
+    }
+
+    this.getOldData = function(){
+      return oldUser;
+    }
+  }
+
   $scope.disableChanges = function(){
-      // var test = setData.getPreviousData();
-      console.log('test');
+    //( this.userType === 'patient') ? disablePatientChanges() : disableDoctorChanges();
+
+    if ( this.userType === 'patient'){
+      this.user.name = this.getOldData().name;
+      this.user.complaint = this.getOldData().complaint;
+      this.user.visit_doctor = this.getOldData().visit_doctor;
+      this.user.surname = this.getOldData().surname;
+    }else{
+      this.user.name = this.getOldData().name;
+      this.user.surname = this.getOldData().surname;
+      this.user.type = this.getOldData().type;
+      this.user.patient_id = this.getOldData().patient_id;
+    }
   };
+
+  var disablePatientChanges = function(){}
+
+  var disableDoctorChanges = function(){}
 });

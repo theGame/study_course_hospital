@@ -1,22 +1,13 @@
 'use strict';
 
-app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStorage){
+app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStorage, getData){
   //declaration
   $scope.$storage  = $sessionStorage;
-  $scope.users = [];
 
-  //get patients
-  $http({
-    methoud : "GET",
-    url : "../../json/patients.json"
-  }).then(function succesHandler(res){
-
-    $scope.users = res.data;
-    console.log(res.data)
-
-  }, function errorsHandler(res){
-    console.warn(res);
+  $scope.users = getData.getUsersData().then(function(response){
+    $scope.users = response.data;
   });
+
 
   //remove patient
   $scope.removePatient = function(index){

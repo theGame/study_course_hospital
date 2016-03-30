@@ -17,6 +17,23 @@ body{
     .carousel-control.left, .carousel-control.right {
       display: none;
     }
+
+    .carousel-caption{
+      left: 0;
+      right: 0;
+      background: rgba(60, 60, 60, 0.45);
+      padding-bottom: 15px;
+      bottom: 0;
+      padding-left: 4%;
+      padding-right: 4%;
+
+      &:hover{
+        background: rgba(0, 0, 0, 0.45);
+      }
+    }
+    .carousel-indicators{
+      bottom: 0;
+    }
   }
 
   #restore-patient{

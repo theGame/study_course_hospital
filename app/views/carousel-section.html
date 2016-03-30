@@ -4,8 +4,8 @@
       <div slide ng-repeat="slide in carousel.carouselImages" active="slide.active">
         <img ng-src="../images/{{slide.image_name}}" style="margin: auto;">
         <div class="carousel-caption">
-          <h4>Slide {{$index}}</h4>
-          <p>{{slide.title}}</p>
+          <h4>{{slide.title}}</h4>
+          <p>{{slide.sub_title}}</p>
         </div>
       </div>
     </div>
