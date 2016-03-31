@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/app/json/carousel.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/json/doctors.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/json/patients.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/carouselCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/doctorCtrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" charset="UTF-8" />
@@ -30,5 +31,7 @@
     <file url="file://$PROJECT_DIR$/app/views/patients-table.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/restore-patient.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/spec/controllers/about.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/spec/controllers/main.js" charset="UTF-8" />
   </component>
 </project>

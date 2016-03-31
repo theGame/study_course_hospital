@@ -58,7 +58,4 @@ app.controller('modalCtrl', function ($scope, $filter) {
     }
   };
 
-  var disablePatientChanges = function(){}
-
-  var disableDoctorChanges = function(){}
 });
