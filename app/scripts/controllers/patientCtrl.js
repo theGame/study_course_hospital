@@ -4,7 +4,7 @@ app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStor
   //declaration
   $scope.$storage  = $sessionStorage;
 
-  $scope.users = getData.getUsersData().then(function(response){
+  getData.getUsersData().then(function(response){
     $scope.users = response.data;
   });
 
