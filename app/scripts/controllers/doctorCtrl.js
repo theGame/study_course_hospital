@@ -2,7 +2,7 @@
 
 app.controller('DoctorCtrl', function ($scope, $http, getData){
 
-  $scope.specialists = getData.getDoctorsData().then(function(response){
+  getData.getDoctorsData().then(function(response){
     $scope.specialists = response.data;
   });
 

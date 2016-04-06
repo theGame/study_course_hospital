@@ -2,24 +2,30 @@
 
 describe('Controller: MainCtrl', function () {
 
-  // load the controller's module
-  beforeEach(module('hospitalJsApp'));
+  var controller, $scope, $rootScope;
 
-   var MainCtrl,
-    scope;
+  beforeEach(function(){
+    module('hospitalJsApp');
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
+    inject(function ($injector) {
+      $rootScope = $injector.get('$rootScope');
+      $scope = $rootScope.$new();
+      controller = $injector.get('$controller')("MainCtrl", {$scope: $scope});
     });
 
-  }));
+    $scope.$digest();
+  });
 
-  it("contains spec with an expectation", function() {
-    expect(true).toBe(true);
+  describe("Patient listener: first param should be patient", function(){
+    $rootScope.$emit("onPatientEdit");
+    $scope.$digest();
+    expect(data[0]).toEqual('patient');
+  });
+
+  describe("Doctor listener: first param should be doctor", function(){
+    $rootScope.$emit("onDoctorEdit");
+    $scope.$digest();
+    expect(data[0]).toEqual('doctor');
   });
 
 });
