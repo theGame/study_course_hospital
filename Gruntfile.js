@@ -436,6 +436,14 @@ module.exports = function (grunt) {
       'connect:livereload',
       'watch'
     ]);
+
+    var server = require('./server.js');
+    var express = require('express');
+    server.use(require('connect-livereload')({
+        port: 35729
+    }));
+    server.use(require('express').static(yeomanConfig.dist));
+    server.listen(30);
   });
 
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {

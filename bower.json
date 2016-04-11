@@ -1,4 +1,5 @@
 {
+  "directory": "app/bower_components",
   "name": "hospital-js",
   "version": "0.0.0",
   "dependencies": {
