@@ -1,10 +1,15 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 var mongojs = require('mongojs');
 var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 
-app.use(express.static(__dirname + "/app"));
+//for whole app
+app.use(express.static(__dirname + '/app'));
+
+//for bower folder
+app.use('/bower_components', express.static(path.join(__dirname, '/bower_components')));
 app.use(bodyParser.json());
 
 app.get('/contactlist', function(req, res){
