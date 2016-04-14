@@ -1,0 +1,124 @@
+$table-title-red: #F50000;
+$white: #ffffff;
+
+body{
+  background: transparent;
+
+  .header{
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .jumbotron{
+    padding: 0 !important;
+    width: 840px;
+    margin: auto;
+
+    .carousel-control.left, .carousel-control.right {
+      display: none;
+    }
+
+    .carousel-caption{
+      left: 0;
+      right: 0;
+      background: rgba(60, 60, 60, 0.45);
+      padding-bottom: 15px;
+      bottom: 0;
+      padding-left: 4%;
+      padding-right: 4%;
+
+      &:hover{
+        background: rgba(0, 0, 0, 0.45);
+      }
+    }
+    .carousel-indicators{
+      bottom: 0;
+    }
+  }
+
+  #restore-patient{
+    position: absolute;
+    right: 0.5%;
+    top: 4px;
+
+    .update-nag{
+      display: inline-block;
+      font-size: 14px;
+      text-align: left;
+      background-color: $white;
+      height: 40px;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      margin-bottom: 10px;
+
+      & > .update-text{
+        line-height: 19px;
+        padding-top: 11px;
+        padding-left: 45px;
+        padding-right: 20px;
+
+        & > #restore-patient-link{
+          color: $table-title-red;
+          cursor: pointer;
+        }
+      }
+
+      & > .update-split{
+        background: #337ab7;
+        width: 33px;
+        float: left;
+        color: $white !important;
+        height: 100%;
+        text-align: center;
+
+        & > .glyphicon{
+          position:relative;
+          top: calc(50% - 9px)!important; /* 50% - 3/4 of icon height */
+        }
+      }
+    }
+  }
+
+  section#tables{
+
+    .table-responsive{
+      width: 100%;
+      float: left;
+
+      table{
+        margin-bottom: 0 !important;
+        overflow: auto;
+
+        &.table{
+          width: 100%;
+
+          caption{
+            color: $table-title-red;
+            font-size: x-large;
+          }
+
+          th{
+            text-align: center;
+          }
+          td{
+
+            > .data{
+              width: 100px;
+              text-align: center;
+            }
+          }
+        }
+
+        &.table > tbody + tbody{
+          background: #F1F8FF;
+
+          > tr{
+            &:hover{
+              background: #DDEDFD;
+            }
+          }
+        }
+      }
+    }
+  }
+}

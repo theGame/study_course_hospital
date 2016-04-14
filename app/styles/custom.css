@@ -1,0 +1,77 @@
+body {
+  background: transparent; }
+  body .header {
+    margin-bottom: 0;
+    border-bottom: none; }
+  body .jumbotron {
+    padding: 0 !important;
+    width: 840px;
+    margin: auto; }
+    body .jumbotron .carousel-control.left, body .jumbotron .carousel-control.right {
+      display: none; }
+    body .jumbotron .carousel-caption {
+      left: 0;
+      right: 0;
+      background: rgba(60, 60, 60, 0.45);
+      padding-bottom: 15px;
+      bottom: 0;
+      padding-left: 4%;
+      padding-right: 4%; }
+      body .jumbotron .carousel-caption:hover {
+        background: rgba(0, 0, 0, 0.45); }
+    body .jumbotron .carousel-indicators {
+      bottom: 0; }
+  body #restore-patient {
+    position: absolute;
+    right: 0.5%;
+    top: 4px; }
+    body #restore-patient .update-nag {
+      display: inline-block;
+      font-size: 14px;
+      text-align: left;
+      background-color: #ffffff;
+      height: 40px;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px; }
+      body #restore-patient .update-nag > .update-text {
+        line-height: 19px;
+        padding-top: 11px;
+        padding-left: 45px;
+        padding-right: 20px; }
+        body #restore-patient .update-nag > .update-text > #restore-patient-link {
+          color: #F50000;
+          cursor: pointer; }
+      body #restore-patient .update-nag > .update-split {
+        background: #337ab7;
+        width: 33px;
+        float: left;
+        color: #ffffff !important;
+        height: 100%;
+        text-align: center; }
+        body #restore-patient .update-nag > .update-split > .glyphicon {
+          position: relative;
+          top: calc(50% - 9px) !important;
+          /* 50% - 3/4 of icon height */ }
+  body section#tables .table-responsive {
+    width: 100%;
+    float: left; }
+    body section#tables .table-responsive table {
+      margin-bottom: 0 !important;
+      overflow: auto; }
+      body section#tables .table-responsive table.table {
+        width: 100%; }
+        body section#tables .table-responsive table.table caption {
+          color: #F50000;
+          font-size: x-large; }
+        body section#tables .table-responsive table.table th {
+          text-align: center; }
+        body section#tables .table-responsive table.table td > .data {
+          width: 100px;
+          text-align: center; }
+      body section#tables .table-responsive table.table > tbody + tbody {
+        background: #F1F8FF; }
+        body section#tables .table-responsive table.table > tbody + tbody > tr:hover {
+          background: #DDEDFD; }
+
+/*# sourceMappingURL=custom.css.map */
