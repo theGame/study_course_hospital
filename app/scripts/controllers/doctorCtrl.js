@@ -7,12 +7,19 @@ app.controller('DoctorCtrl', function ($scope, $http, getData){
   });
 
 
-  $scope.removeDoctor = function(index){
-    $scope.specialists.doctors.splice(index, 1);
+  $scope.removeDoctor = function(id){
+
+    $http.delete('/doctors/'+$scope.specialists[id]._id)
+      .success(function(response){
+        $scope.specialists.splice(id, 1);
+      })
+      .error(function(data, status){
+        console.log('--- '+data);
+      });
   };
 
   $scope.editDoctor = function(index){
-    var obj = $scope.specialists.doctors[index];
+    var obj = $scope.specialists[index];
     $scope.$emit('onDoctorEdit', ['doctor', obj, index]);
   };
 

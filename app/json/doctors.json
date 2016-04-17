@@ -5,35 +5,6 @@
     "surname": "Doc1",
     "type": "Audiologist",
     "room": "1",
-    "working_day": {
-      "su": {
-        "status": "true",
-        "hours": "14:00 - 18:00"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": "[1, 3, 5]"
   }, {
     "id": "2",
@@ -41,33 +12,6 @@
     "surname": "Doc2",
     "type": "Cardiologist",
     "room": "2",
-    "working_day": {
-      "su": {
-        "status": "true",
-        "hours": "14:00 - 18:00"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "we": {
-        "status": "false"
-      },
-      "th": {
-        "status": "true",
-        "hours": "10:00 - 18:00"
-      },
-      "fr": {
-        "status": "false"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": ""
   }, {
     "id": "3",
@@ -75,33 +19,6 @@
     "surname": "Doc3",
     "type": "Surgeon",
     "room": "3",
-    "working_day": {
-      "su": {
-        "status": "false"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "12:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "false"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": "[2]"
   }, {
     "id": "4",
@@ -109,34 +26,6 @@
     "surname": "Doc4",
     "type": "Physiologist",
     "room": "4",
-    "working_day": {
-      "su": {
-        "status": "false"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "11:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 15:00"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "true",
-        "hours": "08:00 - 15:00"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 15:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": "[4]"
   }, {
     "id": "5",
@@ -144,35 +33,6 @@
     "surname": "Doc5",
     "type": "Audiologist",
     "room": "5",
-    "working_day": {
-      "su": {
-        "status": "true",
-        "hours": "14:00 - 18:00"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": "[7]"
   }, {
     "id": "6",
@@ -180,35 +40,6 @@
     "surname": "Doc6",
     "type": "Anesthesiologist",
     "room": "6",
-    "working_day": {
-      "su": {
-        "status": "true",
-        "hours": "11:00 - 18:00"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": "[6]"
   }, {
     "id": "7",
@@ -216,35 +47,6 @@
     "surname": "Doc7",
     "type": "Dentist",
     "room": "7",
-    "working_day": {
-      "su": {
-        "status": "true",
-        "hours": "14:00 - 18:00"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": ""
   }, {
     "id": "8",
@@ -252,33 +54,6 @@
     "surname": "Doc8",
     "type": "Immunologist",
     "room": "8",
-    "working_day": {
-      "su": {
-        "status": "true",
-        "hours": "14:00 - 18:00"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "false"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "false"
-      },
-      "fr": {
-        "status": "false"
-      },
-      "sa": {
-        "status": "true",
-        "hours": "11:00 - 14:00"
-      }
-    },
     "patient_id": ""
   }, {
     "id": "9",
@@ -286,33 +61,6 @@
     "surname": "Doc9",
     "type": "Neurosurgeon",
     "room": "9",
-    "working_day": {
-      "su": {
-        "status": "false"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "we": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "th": {
-        "status": "false"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": ""
   }, {
     "id": "10",
@@ -320,33 +68,6 @@
     "surname": "Doc10",
     "type": "Oncologist",
     "room": "10",
-    "working_day": {
-      "su": {
-        "status": "true",
-        "hours": "14:00 - 18:00"
-      },
-      "mo": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "tu": {
-        "status": "false"
-      },
-      "we": {
-        "status": "false"
-      },
-      "th": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "fr": {
-        "status": "true",
-        "hours": "08:00 - 18:00"
-      },
-      "sa": {
-        "status": "false"
-      }
-    },
     "patient_id": ""
   }]
 }

@@ -3,14 +3,14 @@
 app.service('getData', function($http){
 
   this.getUsersData = function(){
-    return $http.get('../../json/patients.json');
+    return $http.get('/patients');
   }
 
   this.getDoctorsData = function(){
-    return $http.get('../../json/doctors.json');
+    return $http.get('/doctors');
   }
 
   this.getCarouselData = function(){
-    return $http.get('../../json/carousel.json');
+    return $http.get('/carousel');
   }
 });

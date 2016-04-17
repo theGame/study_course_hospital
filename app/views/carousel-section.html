@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <section data-ng-controller="carouselCtrl">
     <div carousel interval="3000">
-      <div slide ng-repeat="slide in carousel.carouselImages" active="slide.active">
+      <div slide ng-repeat="slide in carousel" active="slide.active">
         <img ng-src="../images/{{slide.image_name}}" style="margin: auto;">
         <div class="carousel-caption">
           <h4>{{slide.title}}</h4>

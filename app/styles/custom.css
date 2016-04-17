@@ -5,7 +5,7 @@ body {
     border-bottom: none; }
   body .jumbotron {
     padding: 0 !important;
-    width: 840px;
+    width: auto;
     margin: auto; }
     body .jumbotron .carousel-control.left, body .jumbotron .carousel-control.right {
       display: none; }

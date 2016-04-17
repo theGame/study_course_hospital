@@ -4,42 +4,53 @@ app.controller('PatientsCtrl', function ($rootScope, $scope, $http, $sessionStor
   //declaration
   $scope.$storage  = $sessionStorage;
 
-  getData.getUsersData().then(function(response){
-    $scope.users = response.data;
-  });
-
+  //in order to keep data fresh
+  var refreshData = function(){
+    getData.getUsersData().then(function(response){
+      $scope.users = response.data;
+    });
+  }
 
   //remove patient
-  $scope.removePatient = function(index){
+  $scope.removePatient = function(id){
     // add to session in the future
-    savePatientInStorage(index);
+    savePatientInStorage(id);
 
-    //remove user from object
-    $scope.users.patients.splice(index, 1);
+    $http.delete('/patients/'+$scope.users[id]._id)
+      .success(function(response){
+        //remove user from object
+        $scope.users.splice(id, 1);
+      })
+      .error(function(data, status){
+        console.log('--- '+data);
+      });
   };
 
 
   //save patient in session storage
-  function savePatientInStorage(index){
-    $scope.Patient = function(firstName, lastName, problem, date, id){
-      this.name = firstName;
-      this.surname = lastName;
-      this.complaint = problem;
-      this.visit_doctor = date;
-      this.id = id;
+  function savePatientInStorage(id){
+    $scope.Patient = function(name, surname, complaint, visit_doctor, _id){
+      this.name = name;
+      this.surname = surname;
+      this.complaint = complaint;
+      this.visit_doctor = visit_doctor;
+      this.id = _id;
     }
-    $sessionStorage.newPatient = new $scope.Patient($scope.users.patients[index].name, $scope.users.patients[index].surname, $scope.users.patients[index].complaint, $scope.users.patients[index].visit_doctor, $scope.users.patients[index].id );
+    $sessionStorage.newPatient = new $scope.Patient($scope.users[id].name, $scope.users[id].surname, $scope.users[id].complaint, $scope.users[id].visit_doctor );
   };
 
   //listeners
   $scope.$on('passPatient', function(event, data){
-    $scope.users.patients.push(data);
+    $http.post('/patients', data).success(function(response){
+      refreshData();
+    });
   });
 
   $scope.editPatient = function(index){
-    var obj = $scope.users.patients[index];
+    var obj = $scope.users[index];
     $scope.$emit('onPatientEdit', ['patient', obj, index]);
   };
 
+  refreshData();
 
 });

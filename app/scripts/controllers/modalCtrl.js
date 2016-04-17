@@ -7,7 +7,7 @@
  * # modalCtrl
  * Controller of the hospitalJsApp
  */
-app.controller('modalCtrl', function ($scope, $filter) {
+app.controller('modalCtrl', function ($scope, $filter, $http) {
 
   //receive data
   $scope.$on('showEditModal', function(event, data){
@@ -57,5 +57,13 @@ app.controller('modalCtrl', function ($scope, $filter) {
       this.user.patient_id = this.getOldData().patient_id;
     }
   };
+
+  $scope.updateOnServer = function(){
+    if( $scope.userType === 'doctor' ){
+      $http.put('/doctors/' + $scope.user._id, $scope.user).success(function(res){});
+    }else{
+      $http.put('/patients/' + $scope.user._id, $scope.user).success(function(res){});
+    }
+  }
 
 });

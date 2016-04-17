@@ -66,7 +66,7 @@ module.exports = function (grunt) {
         script: 'server.js'
       }
     },
-      
+
 
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {

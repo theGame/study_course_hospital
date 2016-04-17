@@ -14,8 +14,8 @@
             <th>Delete</th>
           </thead>
           <tbody>
-            <tr data-ng-repeat="doctor in specialists.doctors">
-              <td class="text-center">{{doctor.id}}</td>
+            <tr data-ng-repeat="doctor in specialists">
+              <td class="text-center">{{$index}}</td>
               <td class="text-center">{{doctor.name}}</td>
               <td class="text-center">{{doctor.surname}}</td>
               <td class="text-center">{{doctor.type}}</td>
